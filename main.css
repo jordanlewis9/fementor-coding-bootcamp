@@ -1,0 +1,12 @@
+body {
+  font-family: Inter;
+  box-sizing: border-box;
+}
+
+.testimonial__container {
+  margin: 5% 2.5%;
+}
+
+.hide {
+  display: none;
+}
