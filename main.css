@@ -4,10 +4,11 @@
 }
 
 body {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   box-sizing: border-box;
-  font-size: 32px;
   font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
 
 .testimonial__quote--author {
@@ -16,12 +17,14 @@ body {
 
 @media (max-width: 600px) {
   .container {
+    padding: 5% 5%;
     height: 100vh;
     width: 100vw;
   }
 
   .testimonial__container {
-    margin: 5% 2.5%;
+    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-columns: 100%;
@@ -29,6 +32,8 @@ body {
 
   .testimonial__quote {
     position: relative;
+    text-align: center;
+    height: 100%;
     width: 100%;
     grid-row-start: 2;
     grid-row-end: 3;
@@ -37,7 +42,7 @@ body {
   .testimonial__quote--svg {
     position: absolute;
     top: 0;
-    right: 50%;
+    right: 40%;
     opacity: 0.5;
   }
 
@@ -47,26 +52,28 @@ body {
   }
 
   .testimonial__picture {
-    position: relative;
+    background-image: url("./images/pattern-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 100%;
     grid-row-start: 1;
     grid-row-end: 2;
   }
 
-  .testimonial__picture--svg {
-    transform: scale(0.5);
-  }
-
-  .testimonial__picture--svg {
-    position: absolute;
-    float: left;
-    z-index: -1;
-  }
-
   .testimonial__picture--1,
   .testimonial__picture--2 {
-    width: 100%;
-    opacity: 0.1;
+    width: 70%;
+    border: solid 1px red;
+  }
+
+  .testimonial__picture--1::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
   }
 }
 
