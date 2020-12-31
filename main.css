@@ -5,6 +5,7 @@
 
 body {
   font-family: Inter, sans-serif;
+  color: var(--darkBlue);
   box-sizing: border-box;
   font-weight: 300;
   margin: 0;
@@ -17,9 +18,26 @@ body {
   font-weight: 700;
 }
 
+.testimonial__quote--author--job {
+  color: var(--grayBlue);
+}
+
 .testimonial__picture--1,
 .testimonial__picture--2 {
   border-radius: 5px;
+}
+
+.curve__svg--container {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+}
+
+.curve__svg {
+  transform: scale(0.5);
 }
 
 @media (max-width: 600px) {
@@ -39,6 +57,7 @@ body {
   }
 
   .testimonial__quote {
+    position: relative;
     text-align: center;
     height: 100%;
     width: 100%;
@@ -47,10 +66,13 @@ body {
   }
 
   .testimonial__quote--svg {
+    transform: scale(0.5);
     position: absolute;
-    top: 0;
-    right: 40%;
-    opacity: 0.5;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0.9;
   }
 
   .testimonial__quote--1,
@@ -79,6 +101,7 @@ body {
 
   .testimonial__picture--1,
   .testimonial__picture--2 {
+    box-shadow: -20px 60px 30px -30px var(--grayBlue);
     width: 100%;
     height: 100%;
   }
