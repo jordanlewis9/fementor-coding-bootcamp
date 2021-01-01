@@ -27,33 +27,20 @@ body {
   border-radius: 5px;
 }
 
-.curve__svg--container {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  position: absolute;
-  bottom: 0;
-  left: -50%;
-}
-
-.curve__svg {
-  transform: scale(0.5);
-}
-
 @media (max-width: 600px) {
   .container {
-    padding: 5% 5%;
-    height: 90%;
-    width: 90%;
+    padding: 5vh 5vw 0 5vw;
+    height: 80vh;
+    width: 90vw;
   }
 
   .testimonial__container {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 50% 42.5%;
     grid-template-columns: 1fr;
-    gap: 10%;
+    gap: 7.5%;
   }
 
   .testimonial__quote {
@@ -84,6 +71,7 @@ body {
   .testimonial__picture--container {
     background-image: url("./images/pattern-bg.svg");
     background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -124,6 +112,14 @@ body {
   .slider__prev,
   .slider__next {
     transform: scale(0.7);
+  }
+
+  .curve__svg--container {
+    background-image: url("./images/pattern-curve.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 15vh;
   }
 }
 
