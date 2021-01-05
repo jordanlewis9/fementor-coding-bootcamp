@@ -33,7 +33,7 @@ const handleNextTransition = () => {
     nextSlider.removeEventListener('click', handleNextTransition);
     pic2.classList.remove('picture-slide-in-right');
     document.addEventListener('keydown', handleKeyup);
-  }, 500)
+  }, 500);
 };
 
 const handlePrevTransition = () => {
@@ -49,7 +49,7 @@ const handlePrevTransition = () => {
     prevSlider.removeEventListener('click', handlePrevTransition);
     pic1.classList.remove('picture-slide-in-left');
     document.addEventListener('keydown', handleKeyup);
-    }, 500)
+    }, 500);
 };
 
 document.addEventListener('keydown', handleKeyup);
