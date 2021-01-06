@@ -36,6 +36,11 @@ body {
   background-color: white;
 }
 
+.slider__prev,
+.slider__next {
+  display: block;
+}
+
 @media (max-width: 600px) {
   .container {
     padding: 5vh 5vw 0 5vw;
@@ -136,6 +141,7 @@ body {
   body {
     position: relative;
   }
+
   .container {
     height: 85vh;
     width: 90vw;
@@ -226,6 +232,19 @@ body {
     width: 100vw;
     height: 20vh;
   }
+
+  .slider__next,
+  .slider__prev {
+    z-index: 100;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .pointer:hover {
+    filter: brightness(1.25);
+  }
 }
 
 .picture-slide-in-right {
@@ -266,14 +285,6 @@ body {
   100% {
     left: 0;
   }
-}
-
-.pointer {
-  cursor: pointer;
-}
-
-.pointer:hover {
-  filter: brightness(1.25);
 }
 
 .hide {
